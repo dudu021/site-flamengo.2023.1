@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+
+      
+  <link rel="stylesheet" href="../plugins/jquery.bxslider.css">
+  <link rel="stylesheet" href="../plugins/magnific-popup.css">
+  <script src="../plugins/jquery.min.js"></script>
+  <script src="../plugins/jquery.bxslider.min.js"></script>
+  <script src="../plugins/jquery.magnific-popup.js"></script>
+
+  <script>
+    $(document).ready(function(){
+        $('#galeria-fotos').magnificPopup({
+		delegate: 'a',
+		type: 'image',
+		closeOnContentClick: false,
+		closeBtnInside: false,
+		mainClass: 'mfp-with-zoom mfp-img-mobile',
+		image: {
+			verticalFit: true,
+			titleSrc: function(item) {
+				return item.el.attr('title');
+			}
+		},
+		gallery: {
+			enabled: true
+		},
+		zoom: {
+			enabled: true,
+			duration: 300, // don't foget to change the duration also in CSS
+			opener: function(element) {
+				return element.find('img');
+			}
+		}
+		
+	});
+    });
+  </script>
+    <title>Corinthians</title>
+</head>
+<body>
+    <header id="cabecalho">
+        <div class="menu">
+            <img src="../imagens/logo-corinthians-4096.png" id="logo">
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Inicio</a></li>
+                    <li><a href="../internas/titulos.html">Titulos</a></li>
+                    <li><a href="internas/galeria">Galeria</a></li>
+                    <li><a href="../internas/loja.html">Loja</a></li>
+                    <li><a href="../internas/falatorcedor.html">Fala Torcedor</a></li>
+                    <li><a href="https://www.corinthians.com.br/" target="_blank">Site Oficial</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section id="fotos">
+        <div id="container">
+            <h2 class="titulo-secao">Fotos</h2>
+            <div id="galeria-fotos">
+                <a href="../imagens/Fotos/Foto1.jpg" title="Foto 01"><img src="../imagens/Fotos/Foto1.jpg" alt=""></a>
+                <a href="../imagens/Fotos/Foto5.jpeg" title="Foto 02"><img src="../imagens/Fotos/Foto5.jpeg" alt=""></a>
+                <a href="../imagens/Fotos/Foto3.jpeg" title="Foto 03"><img src="../imagens/Fotos/Foto3.jpeg" alt=""></a>
+                <a href="../imagens/Fotos/Foto4.jpeg" title="Foto 04"><img src="../imagens/Fotos/Foto4.jpeg" alt=""></a>
+                <a href="../imagens/Fotos/Foto2.jpeg" title="Foto 05"><img src="../imagens/Fotos/Foto2.jpeg" alt=""></a>
+                <a href="../imagens/Fotos/Foto6.jpeg" title="Foto 06"><img src="../imagens/Fotos/Foto6.jpeg" alt=""></a>
+                <a href="../imagens/Fotos/Foto7.jpeg" title="Foto 07"><img src="../imagens/Fotos/Foto7.jpeg" alt=""></a>
+                <a href="../imagens/Fotos/Foto8.jpeg" title="Foto 08"><img src="../imagens/Fotos/Foto8.jpeg" alt=""></a>
+            </div>
+        </div>
+    </section>
+
+    <section id="video">
+        <div id="container">
+            <h2 class="titulo-secao">Vídeos</h2>
+            <iframe src="https://www.youtube.com/embed/5Ug6d0phYfM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </section>
+
+    <footer id="rodape">
+        <address>
+
+            Projeto de Desenvolvimento Web<br>
+            Aluno: Julianderson Da Silva Cruz
+
+        </address>
+    </footer>
+</body>
+</html>
